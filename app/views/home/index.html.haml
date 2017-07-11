@@ -1,0 +1,21 @@
+.home
+  %p
+    = 'Hello World'
+  %button{type: 'button', class: ['btn', 'btn-primary', 'btn-lg'], data: {toggle: 'modal', target: '#test-modal'} }
+    = 'hello world'
+  %div{class: ['modal', 'fade'], id: 'test-modal', tabindex: '-1', role: 'dialog', 'aria-labelledby' => 'myModalLabel'}
+    %div{class: 'modal-dialog', role: 'document'}
+      .modal-content
+        .modal-header
+          %h4{class: 'modal-title', id: 'myModalLabel'}
+            = 'You just opened a modal!'
+          %button{type: 'button', class: 'close', 'aria-label' => 'Close', data: {dismiss: 'modal'}}
+            %span{'aria-hidden' => true} &times;
+        .modal-body
+          %p
+            = 'So this is working out pretty well'
+        .modal-footer
+        %button{type: 'button', class: ['btn', 'btn-default'], data: {dismiss: 'modal'}}
+          = 'Close'
+        %button{type: 'button', class: ['btn', 'btn-primary']}
+          = 'Close'
