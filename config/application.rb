@@ -27,5 +27,7 @@ module Familiar
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    Dir[Rails.root.join("lib/scraper/*.rb")].each { |f| require f }
   end
 end
